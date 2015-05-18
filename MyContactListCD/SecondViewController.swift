@@ -1,14 +1,14 @@
 //
-//  ViewController.swift
-//  MyContactListCD
+//  SecondViewController.swift
+//  MyContactList
 //
-//  Created by Brian Bansenauer on 5/18/15.
+//  Created by Brian Bansenauer on 5/4/15.
 //  Copyright (c) 2015 Cascadia College. All rights reserved.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class SecondViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -9,11 +9,14 @@
 /* Begin PBXBuildFile section */
 		D1FD2ED71B09D77B002ADAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2ED61B09D77B002ADAAD /* AppDelegate.swift */; };
 		D1FD2EDA1B09D77B002ADAAD /* MyContactListCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2ED81B09D77B002ADAAD /* MyContactListCD.xcdatamodeld */; };
-		D1FD2EDC1B09D77B002ADAAD /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2EDB1B09D77B002ADAAD /* ViewController.swift */; };
-		D1FD2EDF1B09D77B002ADAAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FD2EDD1B09D77B002ADAAD /* Main.storyboard */; };
-		D1FD2EE11B09D77B002ADAAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FD2EE01B09D77B002ADAAD /* Images.xcassets */; };
 		D1FD2EE41B09D77B002ADAAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1FD2EE21B09D77B002ADAAD /* LaunchScreen.xib */; };
 		D1FD2EF01B09D77B002ADAAD /* MyContactListCDTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2EEF1B09D77B002ADAAD /* MyContactListCDTests.swift */; };
+		D1FD2EFF1B09D7FC002ADAAD /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2EF91B09D7FC002ADAAD /* FirstViewController.swift */; };
+		D1FD2F001B09D7FC002ADAAD /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2EFA1B09D7FC002ADAAD /* SecondViewController.swift */; };
+		D1FD2F011B09D7FC002ADAAD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D1FD2EFB1B09D7FC002ADAAD /* Main.storyboard */; };
+		D1FD2F021B09D7FC002ADAAD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D1FD2EFC1B09D7FC002ADAAD /* Images.xcassets */; };
+		D1FD2F041B09D7FC002ADAAD /* LMASettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2EFE1B09D7FC002ADAAD /* LMASettingsController.swift */; };
+		D1FD2F061B09DA42002ADAAD /* DateController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2F051B09DA42002ADAAD /* DateController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,13 +34,16 @@
 		D1FD2ED51B09D77B002ADAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1FD2ED61B09D77B002ADAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D1FD2ED91B09D77B002ADAAD /* MyContactListCD.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyContactListCD.xcdatamodel; sourceTree = "<group>"; };
-		D1FD2EDB1B09D77B002ADAAD /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D1FD2EDE1B09D77B002ADAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D1FD2EE01B09D77B002ADAAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D1FD2EE31B09D77B002ADAAD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		D1FD2EE91B09D77B002ADAAD /* MyContactListCDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyContactListCDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FD2EEE1B09D77B002ADAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1FD2EEF1B09D77B002ADAAD /* MyContactListCDTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyContactListCDTests.swift; sourceTree = "<group>"; };
+		D1FD2EF91B09D7FC002ADAAD /* FirstViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
+		D1FD2EFA1B09D7FC002ADAAD /* SecondViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		D1FD2EFB1B09D7FC002ADAAD /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D1FD2EFC1B09D7FC002ADAAD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		D1FD2EFE1B09D7FC002ADAAD /* LMASettingsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LMASettingsController.swift; sourceTree = "<group>"; };
+		D1FD2F051B09DA42002ADAAD /* DateController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +85,15 @@
 		D1FD2ED31B09D77B002ADAAD /* MyContactListCD */ = {
 			isa = PBXGroup;
 			children = (
+				D1FD2EF91B09D7FC002ADAAD /* FirstViewController.swift */,
+				D1FD2EFA1B09D7FC002ADAAD /* SecondViewController.swift */,
+				D1FD2EFB1B09D7FC002ADAAD /* Main.storyboard */,
+				D1FD2EFC1B09D7FC002ADAAD /* Images.xcassets */,
+				D1FD2EFE1B09D7FC002ADAAD /* LMASettingsController.swift */,
 				D1FD2ED61B09D77B002ADAAD /* AppDelegate.swift */,
-				D1FD2EDB1B09D77B002ADAAD /* ViewController.swift */,
-				D1FD2EDD1B09D77B002ADAAD /* Main.storyboard */,
-				D1FD2EE01B09D77B002ADAAD /* Images.xcassets */,
 				D1FD2EE21B09D77B002ADAAD /* LaunchScreen.xib */,
 				D1FD2ED81B09D77B002ADAAD /* MyContactListCD.xcdatamodeld */,
+				D1FD2F051B09DA42002ADAAD /* DateController.swift */,
 				D1FD2ED41B09D77B002ADAAD /* Supporting Files */,
 			);
 			path = MyContactListCD;
@@ -195,9 +204,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FD2EDF1B09D77B002ADAAD /* Main.storyboard in Resources */,
+				D1FD2F011B09D7FC002ADAAD /* Main.storyboard in Resources */,
+				D1FD2F021B09D7FC002ADAAD /* Images.xcassets in Resources */,
 				D1FD2EE41B09D77B002ADAAD /* LaunchScreen.xib in Resources */,
-				D1FD2EE11B09D77B002ADAAD /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -215,9 +224,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D1FD2EDC1B09D77B002ADAAD /* ViewController.swift in Sources */,
 				D1FD2ED71B09D77B002ADAAD /* AppDelegate.swift in Sources */,
+				D1FD2F061B09DA42002ADAAD /* DateController.swift in Sources */,
 				D1FD2EDA1B09D77B002ADAAD /* MyContactListCD.xcdatamodeld in Sources */,
+				D1FD2F001B09D7FC002ADAAD /* SecondViewController.swift in Sources */,
+				D1FD2EFF1B09D7FC002ADAAD /* FirstViewController.swift in Sources */,
+				D1FD2F041B09D7FC002ADAAD /* LMASettingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -240,14 +252,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		D1FD2EDD1B09D77B002ADAAD /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D1FD2EDE1B09D77B002ADAAD /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D1FD2EE21B09D77B002ADAAD /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
