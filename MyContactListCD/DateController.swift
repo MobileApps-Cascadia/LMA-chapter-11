@@ -9,13 +9,20 @@
 import Foundation
 import UIKit
 
+// Protocol for UIDatePicker and Reminder Segmented Control
 protocol DateControllerDelegate{
     func dateChanged(date:NSDate)
+    func indexChanged(foo:Int)
 }
 
+
 class DateController:UIViewController {
+    // Birthdate picker control
     @IBOutlet weak var pckDate: UIDatePicker!
+    // Reminder Segmented Control
+    @IBOutlet weak var segmentedControl: UISegmentedControl!
     
+    // Delegate
     var delegate:DateControllerDelegate?;
     
     override func viewDidLoad() {
@@ -28,8 +35,11 @@ class DateController:UIViewController {
         self.navigationItem.setRightBarButtonItem(saveButton, animated: false)
         self.title = "Pick Birthdate"
     }
+    
+    // Save data - added indexchanged function
     @IBAction func saveDate(){
         delegate?.dateChanged(pckDate.date)
+        delegate?.indexChanged(segmentedControl.selectedSegmentIndex)
         self.navigationController?.popViewControllerAnimated(true)
     
     }
