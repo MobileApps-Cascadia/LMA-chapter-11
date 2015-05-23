@@ -11,12 +11,18 @@ import UIKit
 
 protocol DateControllerDelegate{
     func dateChanged(date:NSDate)
+    func indexChanged(remind:Int)
 }
 
 class DateController:UIViewController {
     @IBOutlet weak var pckDate: UIDatePicker!
     
-    var delegate:DateControllerDelegate?;
+    @IBOutlet weak var pckReminder: UISegmentedControl!
+    
+    
+    
+        var delegate:DateControllerDelegate?;
+    
     
     override func viewDidLoad() {
         let saveButton = UIBarButtonItem(
@@ -30,6 +36,7 @@ class DateController:UIViewController {
     }
     @IBAction func saveDate(){
         delegate?.dateChanged(pckDate.date)
+        delegate?.indexChanged(pckReminder.selectedSegmentIndex)
         self.navigationController?.popViewControllerAnimated(true)
     
     }
