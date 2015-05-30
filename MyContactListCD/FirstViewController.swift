@@ -23,6 +23,7 @@ class FirstViewController: UIViewController, DateControllerDelegate {
     
     @IBOutlet weak var lblBirthday: UILabel!
     @IBOutlet weak var btnChange: UIButton!
+    @IBOutlet weak var btnSaveContact: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

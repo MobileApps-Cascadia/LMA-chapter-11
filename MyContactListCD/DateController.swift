@@ -28,10 +28,10 @@ class DateController:UIViewController {
         self.navigationItem.setRightBarButtonItem(saveButton, animated: false)
         self.title = "Pick Birthdate"
     }
+    
+    //send pick date back to contact view controller
     @IBAction func saveDate(){
         delegate?.dateChanged(pckDate.date)
         self.navigationController?.popViewControllerAnimated(true)
-    
     }
-    
 }
