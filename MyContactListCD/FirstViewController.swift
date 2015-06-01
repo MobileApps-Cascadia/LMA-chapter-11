@@ -24,6 +24,7 @@ class FirstViewController: UIViewController, DateControllerDelegate {
     @IBOutlet weak var lblBirthday: UILabel!
     @IBOutlet weak var btnChange: UIButton!
     @IBOutlet weak var btnSaveContact: UIButton!
+    @IBOutlet weak var lblReminder: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -51,13 +52,22 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         }
     }
     
-    func dateChanged(date: NSDate) {
+    func dateChanged(date: NSDate, reminder: Int32) {
         let dateFormatter = NSDateFormatter()
+
         dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         
         lblBirthday.text = dateFormatter.stringFromDate(date)
         
+        if(reminder == 1){
+            
+        }else if(reminder == 2){
+            NSDate *reminderWeek = [date .dateByAddingTimeInterval(7*24*60*60)]
+            lblReminder.text = dateFormatter.stringFromDate(reminderWeek)
+        }else{
+            lblReminder.text = "None"
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
