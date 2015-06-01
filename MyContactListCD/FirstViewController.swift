@@ -52,7 +52,7 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         }
     }
     
-    func dateChanged(date: NSDate, reminder: Int32) {
+    func dateChanged(date: NSDate, reminder: Int) {
         let dateFormatter = NSDateFormatter()
 
         dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
@@ -60,12 +60,23 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         
         lblBirthday.text = dateFormatter.stringFromDate(date)
         
+        //reminder 1 week from birthdate
         if(reminder == 1){
-            
-        }else if(reminder == 2){
-            NSDate *reminderWeek = [date .dateByAddingTimeInterval(7*24*60*60)]
-            lblReminder.text = dateFormatter.stringFromDate(reminderWeek)
-        }else{
+            let tomorrow = NSCalendar.currentCalendar().dateByAddingUnit(
+                .CalendarUnitDay,
+                value: -7,
+                toDate: date,
+                options: NSCalendarOptions(0))
+            lblReminder.text = dateFormatter.stringFromDate(tomorrow!)
+        }else if(reminder == 2){    //reminder 2 weeks from birthdate
+            //let today = NSDate()
+            let tomorrow = NSCalendar.currentCalendar().dateByAddingUnit(
+                .CalendarUnitDay,
+                value: -14,
+                toDate: date,
+                options: NSCalendarOptions(0))
+            lblReminder.text = dateFormatter.stringFromDate(tomorrow!)
+        }else{ //set NO reminder
             lblReminder.text = "None"
         }
     }
