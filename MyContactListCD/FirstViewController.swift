@@ -24,6 +24,8 @@ class FirstViewController: UIViewController, DateControllerDelegate {
     @IBOutlet weak var lblBirthday: UILabel!
     @IBOutlet weak var btnChange: UIButton!
     
+    @IBOutlet weak var lblReminder: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -56,6 +58,22 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
         
         lblBirthday.text = dateFormatter.stringFromDate(date)
+        
+    }
+    
+    func indexChanged(remind:Int)
+    {
+        switch remind
+        {
+        case 0: lblReminder.text = "None";
+        break;
+        case 1: lblReminder.text = "One Week";
+        break;
+        case 2: lblReminder.text = "Two Weeks";
+        break;
+        default:
+            break;
+        }
         
     }
     
