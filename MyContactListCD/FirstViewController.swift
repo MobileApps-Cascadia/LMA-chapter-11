@@ -23,6 +23,8 @@ class FirstViewController: UIViewController, DateControllerDelegate {
     
     @IBOutlet weak var lblBirthday: UILabel!
     @IBOutlet weak var btnChange: UIButton!
+    @IBOutlet weak var btnSaveContact: UIButton!
+    @IBOutlet weak var lblReminder: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,13 +52,33 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         }
     }
     
-    func dateChanged(date: NSDate) {
+    func dateChanged(date: NSDate, reminder: Int) {
         let dateFormatter = NSDateFormatter()
+
         dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateFormatter.dateStyle = NSDateFormatterStyle.MediumStyle
         
         lblBirthday.text = dateFormatter.stringFromDate(date)
         
+        //reminder 1 week from birthdate
+        if(reminder == 1){
+            let tomorrow = NSCalendar.currentCalendar().dateByAddingUnit(
+                .CalendarUnitDay,
+                value: -7,
+                toDate: date,
+                options: NSCalendarOptions(0))
+            lblReminder.text = dateFormatter.stringFromDate(tomorrow!)
+        }else if(reminder == 2){    //reminder 2 weeks from birthdate
+            //let today = NSDate()
+            let tomorrow = NSCalendar.currentCalendar().dateByAddingUnit(
+                .CalendarUnitDay,
+                value: -14,
+                toDate: date,
+                options: NSCalendarOptions(0))
+            lblReminder.text = dateFormatter.stringFromDate(tomorrow!)
+        }else{ //set NO reminder
+            lblReminder.text = "None"
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

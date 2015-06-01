@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 protocol DateControllerDelegate{
-    func dateChanged(date:NSDate)
+    func dateChanged(date:NSDate, reminder:Int)
 }
 
 class DateController:UIViewController {
@@ -28,10 +28,12 @@ class DateController:UIViewController {
         self.navigationItem.setRightBarButtonItem(saveButton, animated: false)
         self.title = "Pick Birthdate"
     }
+    @IBOutlet weak var lblReminder: UISegmentedControl!
+    
+    //send pick date back to contact view controller
     @IBAction func saveDate(){
-        delegate?.dateChanged(pckDate.date)
+        
+        delegate?.dateChanged(pckDate.date, reminder: lblReminder.selectedSegmentIndex)
         self.navigationController?.popViewControllerAnimated(true)
-    
     }
-    
 }
