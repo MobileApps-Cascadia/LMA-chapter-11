@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7702" systemVersion="14C1510" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -187,6 +186,24 @@
                                             <segue destination="jSX-S1-Snp" kind="show" identifier="segueContactDate" id="gW1-Nn-jtz"/>
                                         </connections>
                                     </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SkF-P7-Ul3">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="20" y="383" width="79" height="21"/>
+                                        </variation>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="50E-4C-Q76">
+                                        <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="heightClass=regular-widthClass=compact" fixedFrame="YES">
+                                            <rect key="frame" x="107" y="383" width="41" height="21"/>
+                                        </variation>
+                                    </label>
                                 </subviews>
                                 <constraints>
                                     <constraint firstItem="eeC-l2-Ghb" firstAttribute="trailing" secondItem="FTN-CX-Jd4" secondAttribute="trailing" id="0vx-M4-dIF"/>
@@ -231,6 +248,10 @@
                                     <constraint firstItem="E5J-Ih-Zsp" firstAttribute="trailing" secondItem="yuo-xM-qUP" secondAttribute="trailing" id="zbI-dZ-N4z"/>
                                 </constraints>
                                 <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="SkF-P7-Ul3"/>
+                                        <exclude reference="50E-4C-Q76"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <exclude reference="3p1-pL-N8v"/>
                                         <exclude reference="ae4-D5-lXA"/>
@@ -275,6 +296,10 @@
                                     </mask>
                                 </variation>
                                 <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="subviews">
+                                        <include reference="SkF-P7-Ul3"/>
+                                        <include reference="50E-4C-Q76"/>
+                                    </mask>
                                     <mask key="constraints">
                                         <include reference="3p1-pL-N8v"/>
                                         <include reference="ae4-D5-lXA"/>
@@ -355,6 +380,7 @@
                         <outlet property="btnChange" destination="tWw-2P-eTf" id="SQA-to-sqE"/>
                         <outlet property="lblBirthday" destination="NVV-Sh-MYl" id="mZf-Bf-PQh"/>
                         <outlet property="myScroll" destination="j52-fM-cbh" id="DJ1-WI-l6v"/>
+                        <outlet property="reminder" destination="50E-4C-Q76" id="t2f-8p-3Ct"/>
                         <outlet property="txtAddress" destination="FTN-CX-Jd4" id="wkw-Zd-5bD"/>
                         <outlet property="txtCell" destination="E5J-Ih-Zsp" id="Jf9-Oo-r3A"/>
                         <outlet property="txtCity" destination="yuo-xM-qUP" id="JqV-AZ-7ls"/>
@@ -381,56 +407,65 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="506"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="V0p-Oe-Edr">
-                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="380" id="8JS-Dk-aQP"/>
-                                </constraints>
-                                <date key="date" timeIntervalSinceReferenceDate="452979728.28181797">
-                                    <!--2015-05-10 19:42:08 +0000-->
-                                </date>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="8JS-Dk-aQP"/>
-                                    </mask>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reminder:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pOA-YZ-Lct">
+                                <rect key="frame" x="0.0" y="-21" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="16" y="185" width="79" height="21"/>
                                 </variation>
-                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES" misplaced="YES">
-                                    <rect key="frame" x="-5" y="-7" width="400" height="162"/>
-                                    <mask key="constraints">
-                                        <include reference="8JS-Dk-aQP"/>
-                                    </mask>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="78o-zJ-wP1">
+                                <rect key="frame" x="-160" y="-81" width="320" height="162"/>
+                                <date key="date" timeIntervalSinceReferenceDate="454985831.95568597">
+                                    <!--2015-06-03 00:57:11 +0000-->
+                                </date>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="0.0" y="8" width="400" height="162"/>
                                 </variation>
                             </datePicker>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jWb-gD-fsY">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="None"/>
+                                    <segment title="One Week"/>
+                                    <segment title="Two Weeks"/>
+                                </segments>
+                                <variation key="widthClass=compact" fixedFrame="YES">
+                                    <rect key="frame" x="103" y="182" width="281" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="remind:" destination="jSX-S1-Snp" eventType="valueChanged" id="FyD-ry-ZOg"/>
+                                    <action selector="remindIt:" destination="jSX-S1-Snp" eventType="valueChanged" id="dao-2P-xHR"/>
+                                </connections>
+                            </segmentedControl>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="V0p-Oe-Edr" firstAttribute="leading" secondItem="7Pw-gE-KHR" secondAttribute="leadingMargin" constant="-41" id="tPg-Ft-RdC"/>
-                        </constraints>
                         <variation key="default">
                             <mask key="subviews">
-                                <exclude reference="V0p-Oe-Edr"/>
-                            </mask>
-                            <mask key="constraints">
-                                <exclude reference="tPg-Ft-RdC"/>
+                                <exclude reference="pOA-YZ-Lct"/>
+                                <exclude reference="78o-zJ-wP1"/>
+                                <exclude reference="jWb-gD-fsY"/>
                             </mask>
                         </variation>
-                        <variation key="heightClass=regular-widthClass=compact">
+                        <variation key="widthClass=compact">
                             <mask key="subviews">
-                                <include reference="V0p-Oe-Edr"/>
-                            </mask>
-                            <mask key="constraints">
-                                <include reference="tPg-Ft-RdC"/>
+                                <include reference="pOA-YZ-Lct"/>
+                                <include reference="78o-zJ-wP1"/>
+                                <include reference="jWb-gD-fsY"/>
                             </mask>
                         </variation>
                     </view>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO"/>
                     <connections>
-                        <outlet property="pckDate" destination="V0p-Oe-Edr" id="n5G-t3-hTw"/>
+                        <outlet property="remindIt" destination="jWb-gD-fsY" id="fmH-bP-FuJ"/>
+                        <outlet property="remindMeNot" destination="jWb-gD-fsY" id="2jh-xd-v1g"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JPH-OS-iYV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3004.5" y="-320.25"/>
+            <point key="canvasLocation" x="3004.5" y="-321"/>
         </scene>
         <!--Map-->
         <scene sceneID="wg7-f3-ORb">
