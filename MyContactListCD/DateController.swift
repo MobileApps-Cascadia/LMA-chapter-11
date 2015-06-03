@@ -33,5 +33,24 @@ class DateController:UIViewController {
         self.navigationController?.popViewControllerAnimated(true)
     
     }
+    @IBAction func remindIt(sender: AnyObject) {
+        if (remindMeNot.selectedSegmentIndex == 0){
+            for(UILabel*reminder in labels){
+                FirstViewController.reminder.text = "None" //I didn't know how to implement this part of the code
+            }
+        }
+        else if (remindMeNot.selectedSegmentIndex == 1){
+            for (UILabel*reminder){
+                FirstViewController.reminder.text = "One Week"
+            }
+        }
+        else if (remindMeNot.selectedSegmentIndex == 2){
+            for(UILabel*reminder){
+                FirstViewController.reminder.text = "Two Weeks"
+            }
+        }
+    }
+    @IBOutlet weak var remindMeNot: UISegmentedControl!
+    
     
 }
