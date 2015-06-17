@@ -11,7 +11,8 @@ import UIKit
 class FirstViewController: UIViewController, DateControllerDelegate {
 
     @IBOutlet weak var myScroll: UIScrollView!
-
+    
+    // variables for text fields
     @IBOutlet weak var txtName: UITextField!
     @IBOutlet weak var txtAddress: UITextField!
     @IBOutlet weak var txtCity: UITextField!
@@ -24,6 +25,9 @@ class FirstViewController: UIViewController, DateControllerDelegate {
     @IBOutlet weak var lblBirthday: UILabel!
     @IBOutlet weak var btnChange: UIButton!
     
+    // variable for reminder label
+    @IBOutlet weak var lblReminder: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -32,6 +36,8 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    // View or Edit Segmented Control to enable or disable editing contacts
     @IBAction func changeEditMode(sender: AnyObject) {
         
         let controls = [txtName,txtAddress,txtCity,txtState,txtZip,txtCell,txtHomePhone,txtEmail]
@@ -50,6 +56,7 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         }
     }
     
+    // Function for date change and date formatting change
     func dateChanged(date: NSDate) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
@@ -59,11 +66,27 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         
     }
     
+    // Function for reminder change - added
+    func indexChanged(foo:Int) {
+        
+        switch foo       {
+        case 0:
+            lblReminder.text = "None";
+        case 1:
+            lblReminder.text = "One week";
+        case 2:
+            lblReminder.text = "Two week";
+        default:
+            break;
+        }
+    }
+    
+    // prepareForSegue function
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         NSLog("In Segue: %@", segue.identifier!)
 
     if(segue.identifier == "segueContactDate"){
-        let dateController:DateController = segue.destinationViewController as! DateController
+        let dateController:DateController = segue.destinationViewController as DateController
         dateController.delegate = self
     }
     }
