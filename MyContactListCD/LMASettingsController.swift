@@ -49,7 +49,7 @@ class LMASettingsController:UIViewController, UIPickerViewDataSource, UIPickerVi
     }
     
     //MARK: Delegates
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return sortOrderItems[row]
     }
     
