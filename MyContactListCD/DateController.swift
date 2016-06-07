@@ -22,8 +22,8 @@ class DateController:UIViewController {
         let saveButton = UIBarButtonItem(
             barButtonSystemItem: UIBarButtonSystemItem.Save,
             target: self,
-            action: "saveDate" )
-            
+            action: #selector(DateController.saveDate) )
+        
         
         self.navigationItem.setRightBarButtonItem(saveButton, animated: false)
         self.title = "Pick Birthdate"

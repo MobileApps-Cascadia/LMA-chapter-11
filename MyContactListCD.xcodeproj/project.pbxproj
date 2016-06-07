@@ -168,6 +168,8 @@
 		D1FD2EC91B09D77B002ADAAD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Cascadia College";
 				TargetAttributes = {
@@ -417,6 +419,7 @@
 				D1FD2EF51B09D77B002ADAAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D1FD2EF61B09D77B002ADAAD /* Build configuration list for PBXNativeTarget "MyContactListCDTests" */ = {
 			isa = XCConfigurationList;
@@ -425,6 +428,7 @@
 				D1FD2EF81B09D77B002ADAAD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
