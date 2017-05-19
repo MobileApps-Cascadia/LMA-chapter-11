@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7511CEE61CEEC045005B8FC9 /* DataTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7511CEE51CEEC045005B8FC9 /* DataTableViewController.swift */; };
 		D1FD2ED71B09D77B002ADAAD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2ED61B09D77B002ADAAD /* AppDelegate.swift */; };
 		D1FD2EDA1B09D77B002ADAAD /* MyContactListCD.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D1FD2ED81B09D77B002ADAAD /* MyContactListCD.xcdatamodeld */; };
 		D1FD2EE41B09D77B002ADAAD /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = D1FD2EE21B09D77B002ADAAD /* LaunchScreen.xib */; };
@@ -30,6 +31,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7511CEE51CEEC045005B8FC9 /* DataTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTableViewController.swift; sourceTree = "<group>"; };
 		D1FD2ED11B09D77B002ADAAD /* MyContactListCD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyContactListCD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D1FD2ED51B09D77B002ADAAD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1FD2ED61B09D77B002ADAAD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				D1FD2EF91B09D7FC002ADAAD /* FirstViewController.swift */,
 				D1FD2EFA1B09D7FC002ADAAD /* SecondViewController.swift */,
 				D1FD2EFB1B09D7FC002ADAAD /* Main.storyboard */,
+				7511CEE51CEEC045005B8FC9 /* DataTableViewController.swift */,
 				D1FD2EFC1B09D7FC002ADAAD /* Images.xcassets */,
 				D1FD2EFE1B09D7FC002ADAAD /* LMASettingsController.swift */,
 				D1FD2ED61B09D77B002ADAAD /* AppDelegate.swift */,
@@ -231,6 +234,7 @@
 				D1FD2EDA1B09D77B002ADAAD /* MyContactListCD.xcdatamodeld in Sources */,
 				D1FD2F001B09D7FC002ADAAD /* SecondViewController.swift in Sources */,
 				D1FD2EFF1B09D7FC002ADAAD /* FirstViewController.swift in Sources */,
+				7511CEE61CEEC045005B8FC9 /* DataTableViewController.swift in Sources */,
 				D1FD2F041B09D7FC002ADAAD /* LMASettingsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
