@@ -23,6 +23,8 @@ class FirstViewController: UIViewController, DateControllerDelegate {
     
     @IBOutlet weak var lblBirthday: UILabel!
     @IBOutlet weak var btnChange: UIButton!
+    @IBOutlet weak var lblReminder: UILabel!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,38 +34,55 @@ class FirstViewController: UIViewController, DateControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func changeEditMode(sender: AnyObject) {
+    @IBAction func changeEditMode(_ sender: AnyObject) {
         
         let controls = [txtName,txtAddress,txtCity,txtState,txtZip,txtCell,txtHomePhone,txtEmail]
         
         for control in controls{
             if (sender.selectedSegmentIndex == 0) {
-                control.enabled=false
-                control.borderStyle = UITextBorderStyle.None
-                btnChange.enabled = false
+                control?.isEnabled=false
+                control?.borderStyle = UITextBorderStyle.none
+                btnChange.isEnabled = false
                 
             } else {
-                control.enabled=true
-                control.borderStyle = UITextBorderStyle.RoundedRect
-                btnChange.enabled = true
+                control?.isEnabled=true
+                control?.borderStyle = UITextBorderStyle.roundedRect
+                btnChange.isEnabled = true
             }
         }
     }
     
-    func dateChanged(date: NSDate) {
-        let dateFormatter = NSDateFormatter()
-        dateFormatter.timeStyle = NSDateFormatterStyle.NoStyle
-        dateFormatter.dateStyle = NSDateFormatterStyle.ShortStyle
+    func dateChanged(_ date: Date) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeStyle = DateFormatter.Style.none
+        dateFormatter.dateStyle = DateFormatter.Style.short
         
-        lblBirthday.text = dateFormatter.stringFromDate(date)
+        lblBirthday.text = dateFormatter.string(from: date)
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    func indexChanged(_ remind:Int)
+        {
+            switch remind
+            {
+            case 0: lblReminder.text = "None";
+            break;
+            case 1: lblReminder.text = "One Week";
+            break;
+            case 2: lblReminder.text = "Two Weeks";
+            break;
+            default:
+                break;
+            }
+            
+        }
+
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         NSLog("In Segue: %@", segue.identifier!)
 
     if(segue.identifier == "segueContactDate"){
-        let dateController:DateController = segue.destinationViewController as! DateController
+        let dateController:DateController = segue.destination as! DateController
         dateController.delegate = self
     }
     }

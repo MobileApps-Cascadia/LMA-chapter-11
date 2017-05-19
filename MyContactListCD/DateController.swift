@@ -10,27 +10,30 @@ import Foundation
 import UIKit
 
 protocol DateControllerDelegate{
-    func dateChanged(date:NSDate)
+    func dateChanged(_ date:Date)
+    func indexChanged(_ remind:Int)
 }
 
 class DateController:UIViewController {
     @IBOutlet weak var pckDate: UIDatePicker!
     
+     @IBOutlet weak var pckReminder: UISegmentedControl!
     var delegate:DateControllerDelegate?;
     
     override func viewDidLoad() {
         let saveButton = UIBarButtonItem(
-            barButtonSystemItem: UIBarButtonSystemItem.Save,
+            barButtonSystemItem: UIBarButtonSystemItem.save,
             target: self,
             action: #selector(DateController.saveDate) )
         
         
-        self.navigationItem.setRightBarButtonItem(saveButton, animated: false)
+        self.navigationItem.setRightBarButton(saveButton, animated: false)
         self.title = "Pick Birthdate"
     }
     @IBAction func saveDate(){
         delegate?.dateChanged(pckDate.date)
-        self.navigationController?.popViewControllerAnimated(true)
+        delegate?.indexChanged(pckReminder.selectedSegmentIndex)
+        self.navigationController?.popViewController(animated: true)
     
     }
     
