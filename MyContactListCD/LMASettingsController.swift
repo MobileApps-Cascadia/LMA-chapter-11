@@ -13,7 +13,7 @@ class LMASettingsController:UIViewController, UIPickerViewDataSource, UIPickerVi
     @IBOutlet weak var pckSortField: UIPickerView!
     @IBOutlet weak var swAscending: UISwitch!
 
-    @IBAction func sortDirectionChanged(sender: AnyObject) {
+    @IBAction func sortDirectionChanged(_ sender: AnyObject) {
     }
     
     let sortOrderItems = ["Name","City","Birthday"];
@@ -24,10 +24,10 @@ class LMASettingsController:UIViewController, UIPickerViewDataSource, UIPickerVi
         pckSortField.delegate = self
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         //Set the UI based on the settings data
         
-        let settings = NSUserDefaults.standardUserDefaults();
+        let settings = UserDefaults.standard;
         
         //set UIPickerView to the value matching its settings Data
         /*for (index, item) in enumerate(sortOrderItems) {
@@ -37,23 +37,23 @@ class LMASettingsController:UIViewController, UIPickerViewDataSource, UIPickerVi
         }*/
         
         //set the switch to the value matchin its settings data
-        swAscending.setOn(settings.boolForKey("sortDirectionAscending"), animated: false)
+        swAscending.setOn(settings.bool(forKey: "sortDirectionAscending"), animated: false)
     }
     
     //MARK: Data Sources
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int{
+    func numberOfComponents(in pickerView: UIPickerView) -> Int{
         return 1;
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return sortOrderItems.count;
     }
     
     //MARK: Delegates
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return sortOrderItems[row]
     }
     
-    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         NSLog("Chosen item is: %@", sortOrderItems[row]);
     }
 
